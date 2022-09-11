@@ -9,6 +9,13 @@
     text-align: center;
   }
 
+  h2 {
+    margin: 10px 10px 15px 10px;
+    font-size: 1.5em;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
   body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
@@ -104,6 +111,12 @@
     }
   }
 
+  @media (min-width: 767px) {
+    .mobile-only {
+      display: none;
+    }
+  }
+
   /********** mobile devices only **********/
   @media (max-width: 767px) {
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
@@ -145,29 +158,46 @@
     .col-sm-12 {
       width: 100%;
     }
+    .mobile-hidden {
+      display: none;
+    }
   }
 
   /********** module 2 **********/
 
   .box {
-    /* padding: 10px; */
+    height: 100px;
     margin: 10px;
     border: 2px solid black;
     background-color: #D8D8D8;
     position: relative;
     box-sizing: border-box;
+    overflow-y: hidden;
+  }
+
+  .box:hover {
+    cursor: n-resize;
+    overflow-y: scroll;
   }
 
   .title {
-    width: 120px;
     border: 1px solid black;
     text-align: center;
     font-size: 1.25em;
     font-weight: bold;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0px;
+    width: 120px;
+    margin: 0px 0px 10px 0px;
+    float: right;
+  }
+
+  .title-mobile {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    float: right;
   }
 
   .description {
